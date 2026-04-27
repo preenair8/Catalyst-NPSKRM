@@ -4,25 +4,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Young Investigators Journal — NPS Koramangala</title>
-
-<!-- Preconnect for faster font loading -->
-
+<title>Catalyst: Student Research Program — NPS Koramangala</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
 
 <style>
   :root {
-    --ink: #0e1117;
-    --paper: #f5f0e8;
-    --cream: #ede8dc;
-    --gold: #b8860b;
-    --gold-light: #d4a017;
-    --rust: #8b3a1a;
-    --slate: #3d4a5c;
-    --muted: #7a7265;
-    --rule: rgba(14,17,23,0.12);
+    --ink:       #0e1117;
+    --paper:     #f5f0e8;
+    --cream:     #ede8dc;
+    --gold:      #b8860b;
+    --gold-light:#d4a017;
+    --rust:      #8b3a1a;
+    --slate:     #3d4a5c;
+    --muted:     #7a7265;
+    --rule:      rgba(14,17,23,0.12);
+    --green:     #2d6a4f;
+    --blue:      #2c5f8a;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -37,17 +36,14 @@
     overflow-x: hidden;
   }
 
-  /* ─── HEADER RULE ─── */
+  /* ── HEADER RULE ── */
   .header-rule {
     height: 4px;
     background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
   }
 
-  /* ─── MASTHEAD ─── */
-  header {
-    background: var(--ink);
-    color: var(--paper);
-  }
+  /* ── MASTHEAD ── */
+  header { background: var(--ink); color: var(--paper); }
 
   .masthead-top {
     display: flex;
@@ -65,10 +61,7 @@
 
   .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); display: inline-block; margin-right: 6px; }
 
-  .masthead-main {
-    text-align: center;
-    padding: 52px 40px 44px;
-  }
+  .masthead-main { text-align: center; padding: 52px 40px 44px; }
 
   .journal-label {
     font-family: 'DM Mono', monospace;
@@ -85,22 +78,22 @@
     font-size: clamp(2.2rem, 5vw, 4rem);
     font-weight: 700;
     line-height: 1.1;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
   }
+
+  h1 span { color: var(--gold-light); }
 
   .journal-subtitle {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    color: rgba(245,240,232,0.5);
-    margin-bottom: 28px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    font-size: clamp(0.95rem, 2vw, 1.15rem);
+    color: rgba(245,240,232,0.6);
+    max-width: 520px;
+    margin: 0 auto 28px;
+    line-height: 1.6;
   }
 
-  .masthead-divider {
-    color: var(--gold);
-    margin-bottom: 14px;
-    font-size: 0.8rem;
-  }
+  .masthead-divider { color: var(--gold); margin-bottom: 14px; font-size: 0.8rem; }
 
   .masthead-meta {
     font-family: 'DM Mono', monospace;
@@ -109,7 +102,7 @@
     color: rgba(245,240,232,0.3);
   }
 
-  /* ─── NAV ─── */
+  /* ── NAV ── */
   nav {
     background: var(--cream);
     border-bottom: 1px solid var(--rule);
@@ -123,7 +116,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     min-width: max-content;
     padding: 0 16px;
@@ -136,41 +129,33 @@
     text-transform: uppercase;
     color: var(--slate);
     text-decoration: none;
-    padding: 15px 18px;
+    padding: 15px 16px;
     border-bottom: 2px solid transparent;
     transition: color 0.2s, border-color 0.2s;
     white-space: nowrap;
   }
   nav a:hover { color: var(--ink); border-bottom-color: var(--gold); }
 
-  /* ─── HERO BAND ─── */
+  /* ── HERO BAND ── */
   .hero-band {
     background: var(--ink);
     padding: 52px 40px;
     text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.06);
   }
 
   .hero-quote {
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    font-size: clamp(1.05rem, 2.5vw, 1.55rem);
+    font-size: clamp(1.05rem, 2.5vw, 1.5rem);
     color: var(--paper);
     max-width: 660px;
     margin: 0 auto;
   }
 
-  /* ─── SECTIONS ─── */
-  .section {
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 64px 40px;
-  }
-
-  .section-narrow {
-    max-width: 660px;
-    margin: 0 auto;
-    padding: 64px 40px;
-  }
+  /* ── LAYOUT ── */
+  .section        { max-width: 860px; margin: 0 auto; padding: 64px 40px; }
+  .section-narrow { max-width: 660px; margin: 0 auto; padding: 64px 40px; }
 
   .eyebrow {
     font-family: 'DM Mono', monospace;
@@ -192,259 +177,473 @@
 
   h2 em { font-style: italic; color: var(--rust); }
 
-  p.lead {
-    font-size: 1rem;
-    line-height: 1.8;
-    color: var(--slate);
-    margin-bottom: 14px;
-  }
+  p.lead { font-size: 1rem; line-height: 1.8; color: var(--slate); margin-bottom: 14px; }
 
-  .ornament {
-    text-align: center;
-    color: var(--gold);
-    font-size: 0.7rem;
-    padding: 8px 0;
-    opacity: 0.6;
-  }
+  .ornament { text-align: center; color: var(--gold); font-size: 0.7rem; padding: 8px 0; opacity: 0.5; }
 
-  /* ─── ISSUE CARD ─── */
-  .issue-card {
-    border: 1px solid var(--rule);
-    background: white;
-    padding: 36px;
-    margin-top: 28px;
-    border-left: 4px solid var(--gold);
-  }
-
-  .issue-meta {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    color: var(--muted);
-    text-transform: uppercase;
-    margin-bottom: 10px;
-  }
-
-  .issue-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 8px;
-  }
-
-  .paper-list {
-    margin-top: 24px;
-    border-top: 1px solid var(--rule);
-    padding-top: 24px;
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    color: var(--muted);
-    font-style: italic;
-    text-align: center;
-    padding: 20px;
-  }
-
-  /* ─── PROCESS ─── */
-  .process-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 1px;
-    background: var(--rule);
-    border: 1px solid var(--rule);
-    margin-top: 28px;
-  }
-
-  .process-step {
-    background: var(--paper);
-    padding: 28px 24px;
-  }
-
-  .step-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.4rem;
-    font-weight: 700;
-    color: rgba(14,17,23,0.07);
-    line-height: 1;
-    margin-bottom: 6px;
-  }
-
-  .step-title {
-    font-family: 'DM Mono', monospace;
-    font-size: 9.5px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 8px;
-  }
-
-  .step-desc { font-size: 0.86rem; color: var(--slate); line-height: 1.6; }
-
-  /* ─── SUBMIT BAND ─── */
-  .submit-band {
+  /* ── PROGRAM STRUCTURE ── */
+  .structure-bg {
     background: var(--cream);
     border-top: 1px solid var(--rule);
     border-bottom: 1px solid var(--rule);
   }
 
-  .submit-inner {
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 64px 40px;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 40px;
-    align-items: center;
+  .phase-timeline { margin-top: 40px; position: relative; }
+
+  .phase-timeline::before {
+    content: '';
+    position: absolute;
+    left: 29px;
+    top: 0; bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom,
+      var(--blue)  0%,   var(--blue)  20%,
+      var(--green) 20%,  var(--green) 40%,
+      #c47c2a      40%,  #c47c2a      60%,
+      var(--rust)  60%,  var(--rust)  80%,
+      var(--gold)  80%,  var(--gold)  100%
+    );
+    opacity: 0.35;
   }
 
-  .submit-label {
+  .phase-item { display: flex; gap: 24px; margin-bottom: 8px; position: relative; }
+
+  .phase-badge {
+    width: 60px; height: 60px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    border-radius: 2px;
+  }
+
+  .phase-item:nth-child(1) .phase-badge { background: var(--blue); }
+  .phase-item:nth-child(2) .phase-badge { background: var(--green); }
+  .phase-item:nth-child(3) .phase-badge { background: #c47c2a; }
+  .phase-item:nth-child(4) .phase-badge { background: var(--rust); }
+  .phase-item:nth-child(5) .phase-badge { background: var(--gold); }
+
+  .phase-card {
+    background: white;
+    border: 1px solid var(--rule);
+    flex: 1;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+
+  .phase-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+    border-bottom: 1px solid var(--rule);
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .phase-weeks {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .phase-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .phase-deliverable-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 2px;
+    white-space: nowrap;
+  }
+
+  .phase-item:nth-child(1) .phase-deliverable-tag { background: rgba(44,95,138,0.1); color: var(--blue); border: 1px solid rgba(44,95,138,0.25); }
+  .phase-item:nth-child(2) .phase-deliverable-tag { background: rgba(45,106,79,0.1); color: var(--green); border: 1px solid rgba(45,106,79,0.25); }
+  .phase-item:nth-child(3) .phase-deliverable-tag { background: rgba(196,124,42,0.1); color: #c47c2a; border: 1px solid rgba(196,124,42,0.25); }
+  .phase-item:nth-child(4) .phase-deliverable-tag { background: rgba(139,58,26,0.1); color: var(--rust); border: 1px solid rgba(139,58,26,0.25); }
+  .phase-item:nth-child(5) .phase-deliverable-tag { background: rgba(184,134,11,0.1); color: var(--gold); border: 1px solid rgba(184,134,11,0.25); }
+
+  .phase-card-body { padding: 18px 24px; }
+
+  .phase-desc { font-size: 0.88rem; color: var(--slate); line-height: 1.65; }
+
+  .phase-deliverable {
+    margin-top: 14px;
+    padding: 12px 16px;
+    background: var(--paper);
+    border-left: 3px solid;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .phase-item:nth-child(1) .phase-deliverable { border-left-color: var(--blue); }
+  .phase-item:nth-child(2) .phase-deliverable { border-left-color: var(--green); }
+  .phase-item:nth-child(3) .phase-deliverable { border-left-color: #c47c2a; }
+  .phase-item:nth-child(4) .phase-deliverable { border-left-color: var(--rust); }
+  .phase-item:nth-child(5) .phase-deliverable { border-left-color: var(--gold); }
+
+  .deliverable-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+    padding-top: 2px;
+  }
+
+  .deliverable-value {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  /* ── ACHIEVEMENTS ── */
+  .achieve-band { background: var(--ink); padding: 64px 40px; }
+  .achieve-inner { max-width: 860px; margin: 0 auto; }
+  .achieve-inner .eyebrow { color: var(--gold); }
+  .achieve-inner h2 { color: var(--paper); margin-bottom: 32px; }
+
+  .achieve-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  .achieve-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 28px 24px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.2s;
+  }
+
+  .achieve-card:hover { background: rgba(255,255,255,0.08); }
+
+  .achieve-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+
+  .achieve-card:nth-child(1)::before { background: var(--blue); }
+  .achieve-card:nth-child(2)::before { background: #c47c2a; }
+  .achieve-card:nth-child(3)::before { background: var(--rust); }
+  .achieve-card:nth-child(4)::before { background: var(--gold); }
+  .achieve-card:nth-child(5)::before { background: var(--green); }
+
+  .achieve-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.04);
+    line-height: 1;
+    margin-bottom: -6px;
+  }
+
+  .achieve-icon { font-size: 1.4rem; margin-bottom: 14px; display: block; }
+  .achieve-title { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; color: var(--paper); margin-bottom: 8px; }
+  .achieve-desc { font-size: 0.83rem; color: rgba(245,240,232,0.45); line-height: 1.6; }
+
+  /* ── SUBMISSION PORTAL ── */
+  .portal-band {
+    background: var(--cream);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .portal-inner { max-width: 800px; margin: 0 auto; padding: 64px 40px; }
+
+  /* phase tabs */
+  .phase-tabs {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 2px;
+    flex-wrap: wrap;
+  }
+
+  .phase-tab {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 10px 16px;
+    cursor: pointer;
+    border: none;
+    background: rgba(14,17,23,0.08);
+    color: var(--muted);
+    transition: background 0.2s, color 0.2s;
+    border-radius: 2px 2px 0 0;
+  }
+
+  .phase-tab.active { background: white; color: var(--ink); border-bottom: 2px solid var(--gold); }
+  .phase-tab:hover:not(.active) { background: rgba(14,17,23,0.12); color: var(--slate); }
+
+  /* student info always visible */
+  .form-always {
+    background: white;
+    border: 1px solid var(--rule);
+    margin-bottom: 2px;
+  }
+
+  .form-block-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--rule);
+    background: var(--paper);
+  }
+
+  .block-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    background: rgba(184,134,11,0.1);
+    border: 1px solid rgba(184,134,11,0.25);
+    padding: 3px 9px;
+  }
+
+  .block-title {
     font-family: 'DM Mono', monospace;
     font-size: 9.5px;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--slate);
+  }
+
+  .form-body { padding: 24px; display: flex; flex-direction: column; gap: 18px; }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .field.full { grid-column: 1 / -1; }
+
+  label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  input[type="text"], input[type="email"], select, textarea {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid var(--rule);
+    background: var(--paper);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.92rem;
+    color: var(--ink);
+    outline: none;
+    transition: border-color 0.2s;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  input:focus, select:focus, textarea:focus { border-color: var(--gold); background: white; }
+  textarea { resize: vertical; min-height: 88px; }
+
+  /* phase panel */
+  .phase-panel {
+    display: none;
+    background: white;
+    border: 1px solid var(--rule);
+    border-top: none;
+  }
+
+  .phase-panel.active { display: block; }
+
+  .phase-panel-header {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--rule);
+    background: var(--paper);
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .panel-badge {
+    width: 40px; height: 40px;
+    border-radius: 2px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: white;
+    flex-shrink: 0;
+  }
+
+  .panel-1 .panel-badge { background: var(--blue); }
+  .panel-2 .panel-badge { background: var(--green); }
+  .panel-3 .panel-badge { background: #c47c2a; }
+  .panel-4 .panel-badge { background: var(--rust); }
+  .panel-5 .panel-badge { background: var(--gold); }
+
+  .panel-meta {}
+  .panel-phase-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+
+  .panel-weeks {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .deliverable-notice {
+    margin: 16px 24px 0;
+    padding: 12px 16px;
+    border-left: 3px solid var(--gold);
+    background: rgba(184,134,11,0.06);
+    font-size: 0.85rem;
+    color: var(--slate);
+  }
+
+  .deliverable-notice strong {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--gold);
-    margin-bottom: 10px;
+    display: block;
+    margin-bottom: 4px;
   }
 
-  .submit-heading {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-    font-weight: 600;
-    margin-bottom: 10px;
-    line-height: 1.25;
+  .panel-1 .deliverable-notice { border-left-color: var(--blue); background: rgba(44,95,138,0.06); }
+  .panel-1 .deliverable-notice strong { color: var(--blue); }
+  .panel-2 .deliverable-notice { border-left-color: var(--green); background: rgba(45,106,79,0.06); }
+  .panel-2 .deliverable-notice strong { color: var(--green); }
+  .panel-3 .deliverable-notice { border-left-color: #c47c2a; background: rgba(196,124,42,0.06); }
+  .panel-3 .deliverable-notice strong { color: #c47c2a; }
+  .panel-4 .deliverable-notice { border-left-color: var(--rust); background: rgba(139,58,26,0.06); }
+  .panel-4 .deliverable-notice strong { color: var(--rust); }
+  .panel-5 .deliverable-notice { border-left-color: var(--gold); background: rgba(184,134,11,0.06); }
+  .panel-5 .deliverable-notice strong { color: var(--gold); }
+
+  /* upload box */
+  .upload-box {
+    border: 1.5px dashed rgba(14,17,23,0.18);
+    background: var(--paper);
+    padding: 28px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    position: relative;
   }
 
-  .submit-text { font-size: 0.92rem; color: var(--slate); line-height: 1.7; }
+  .upload-box:hover { border-color: var(--gold); background: #fdfaf4; }
 
-  .btn-primary {
+  .upload-box input[type="file"] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+  }
+
+  .upload-icon { font-size: 1.3rem; margin-bottom: 6px; }
+  .upload-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.15em; color: var(--muted); text-transform: uppercase; }
+  .upload-hint { font-size: 0.78rem; color: var(--muted); margin-top: 4px; }
+
+  /* submit row */
+  .submit-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 24px;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-top: none;
+    margin-top: 2px;
+  }
+
+  .btn-submit {
     display: inline-flex;
     align-items: center;
     gap: 10px;
     background: var(--ink);
     color: var(--paper);
-    text-decoration: none;
+    border: none;
     font-family: 'DM Mono', monospace;
     font-size: 11px;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    padding: 16px 26px;
+    padding: 16px 32px;
+    cursor: pointer;
     transition: background 0.2s;
-    white-space: nowrap;
-  }
-  .btn-primary:hover { background: var(--gold); }
-
-  /* ─── BOARD ─── */
-  .board-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-    gap: 20px;
-    margin-top: 28px;
   }
 
-  .board-card {
-    border: 1px solid var(--rule);
-    padding: 22px;
-    background: white;
-    border-bottom: 3px solid var(--gold);
-  }
+  .btn-submit:hover { background: var(--gold); }
 
-  .board-role {
-    font-family: 'DM Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 6px;
-  }
+  .submit-note { font-size: 0.8rem; color: var(--muted); font-style: italic; max-width: 280px; line-height: 1.5; }
 
-  .board-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 4px;
-  }
+  /* ── BOARD ── */
+  .board-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 20px; margin-top: 28px; }
 
+  .board-card { border: 1px solid var(--rule); padding: 22px; background: white; border-bottom: 3px solid var(--gold); }
+  .board-role { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+  .board-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
   .board-affil { font-size: 0.82rem; color: var(--muted); }
 
-  /* ─── RECOGNITION ─── */
+  /* ── RECOGNITION ── */
   .recognition-list { margin-top: 24px; display: flex; flex-direction: column; gap: 1px; }
 
-  .recognition-item {
-    background: white;
-    border: 1px solid var(--rule);
-    padding: 18px 24px;
-    display: flex;
-    align-items: center;
-    gap: 18px;
-  }
-
-  .rec-icon {
-    width: 34px; height: 34px;
-    background: var(--ink);
-    color: var(--gold);
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 1rem;
-    flex-shrink: 0;
-  }
-
+  .recognition-item { background: white; border: 1px solid var(--rule); padding: 18px 24px; display: flex; align-items: center; gap: 18px; }
+  .rec-icon { width: 34px; height: 34px; background: var(--ink); color: var(--gold); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1rem; flex-shrink: 0; }
   .rec-text { font-size: 0.9rem; color: var(--slate); line-height: 1.5; }
   .rec-text strong { display: block; font-weight: 500; color: var(--ink); margin-bottom: 2px; font-family: 'DM Sans', sans-serif; }
 
-  /* ─── CONTACT ─── */
-  .contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-    gap: 20px;
-    margin-top: 28px;
-  }
-
+  /* ── CONTACT ── */
+  .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 20px; margin-top: 28px; }
   .contact-item { padding: 22px; border: 1px solid var(--rule); background: white; }
-
-  .contact-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 8px;
-  }
-
+  .contact-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
   .contact-value { font-size: 0.9rem; color: var(--slate); }
 
-  /* ─── FOOTER ─── */
-  footer {
-    background: var(--ink);
-    color: rgba(245,240,232,0.4);
-    padding: 36px 40px;
-    text-align: center;
-  }
+  /* ── FOOTER ── */
+  footer { background: var(--ink); color: rgba(245,240,232,0.4); padding: 36px 40px; text-align: center; }
+  .footer-top { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--paper); margin-bottom: 6px; font-style: italic; }
+  .footer-meta { font-family: 'DM Mono', monospace; font-size: 9.5px; letter-spacing: 0.12em; margin-top: 14px; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 14px; }
 
-  .footer-top {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.05rem;
-    color: var(--paper);
-    margin-bottom: 6px;
-    font-style: italic;
-  }
-
-  .footer-meta {
-    font-family: 'DM Mono', monospace;
-    font-size: 9.5px;
-    letter-spacing: 0.12em;
-    margin-top: 14px;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    padding-top: 14px;
-  }
-
-  /* ─── RESPONSIVE ─── */
+  /* ── RESPONSIVE ── */
   @media (max-width: 640px) {
     .masthead-top { padding: 10px 20px; font-size: 9px; }
     .masthead-main { padding: 36px 20px 28px; }
     .hero-band { padding: 40px 20px; }
     .section, .section-narrow { padding: 48px 20px; }
-    .submit-inner { padding: 48px 20px; grid-template-columns: 1fr; }
+    .portal-inner { padding: 48px 20px; }
+    .achieve-band { padding: 48px 20px; }
     footer { padding: 28px 20px; }
-    .masthead-top span:last-child { display: none; }
+    .form-row { grid-template-columns: 1fr; }
+    .phase-timeline::before { display: none; }
+    .phase-tabs { gap: 1px; }
+    .phase-tab { padding: 9px 12px; font-size: 8px; }
   }
 </style>
 
@@ -462,11 +661,11 @@
     <span>Est. 2026</span>
   </div>
   <div class="masthead-main">
-    <span class="journal-label">Young Investigators Journal</span>
-    <h1>NPS Koramangala</h1>
-    <p class="journal-subtitle">A journal of original student research</p>
+    <span class="journal-label">NPS Koramangala</span>
+    <h1><span>Catalyst:</span> Student Research Program</h1>
+    <p class="journal-subtitle">A 12-week structured program where students design experiments and write research papers</p>
     <div class="masthead-divider">◆</div>
-    <p class="masthead-meta">Volume 1 · Issue 1 · 2026</p>
+    <p class="masthead-meta">Volume 1 · 2026</p>
   </div>
 </header>
 
@@ -475,11 +674,10 @@
 <nav>
   <div class="nav-inner">
     <a href="#about">About</a>
-    <a href="#current-issue">Current Issue</a>
-    <a href="#archives">Archives</a>
-    <a href="#process">Process</a>
+    <a href="#structure">Program Structure</a>
+    <a href="#achievements">Outcomes</a>
     <a href="#editorial">Editorial Board</a>
-    <a href="#submit">Submit</a>
+    <a href="#submit">Submit Project</a>
     <a href="#recognition">Recognition</a>
     <a href="#contact">Contact</a>
   </div>
@@ -494,88 +692,191 @@
 <!-- ABOUT -->
 
 <div id="about" class="section-narrow">
-  <span class="eyebrow">About the Journal</span>
+  <span class="eyebrow">About the Program</span>
   <h2>Where curiosity becomes <em>discovery.</em></h2>
-  <p class="lead">The Young Investigators Journal at NPS Koramangala is a student-led, peer-reviewed platform that celebrates curiosity, critical thinking, and original research.</p>
-  <p class="lead">Over a structured 12-week journey, students explore questions, design investigations, analyse results, and present their findings in a formal research format. This journal is a space where learning moves beyond textbooks — and into discovery.</p>
+  <p class="lead">Catalyst is a 12-week structured student research program at NPS Koramangala. Students move through every stage of real scientific inquiry — from forming a question to presenting findings.</p>
+  <p class="lead">Each student designs and conducts their own experiment, collects and analyses data, writes a formal research paper, and presents their work. No templates. No shortcuts. Real research.</p>
 </div>
 
 <div class="ornament">── ◆ ──</div>
 
-<!-- CURRENT ISSUE -->
+<!-- PROGRAM STRUCTURE -->
 
-<div id="current-issue" class="section">
-  <span class="eyebrow">Current Issue</span>
-  <h2>Volume 1, Issue 1</h2>
-  <div class="issue-card">
-    <p class="issue-meta">Published · 2026</p>
-    <p class="issue-title">Inaugural Issue — Young Investigators Journal</p>
-    <p style="font-size:0.92rem;color:var(--slate);">Our first volume brings together original student research across disciplines, marking the beginning of a scholarly tradition at NPS Koramangala.</p>
-    <div class="paper-list">Published papers will appear here as they are accepted and typeset.</div>
+<div id="structure" class="structure-bg">
+  <div class="section">
+    <span class="eyebrow">Program Structure</span>
+    <h2>12 Weeks. 5 Phases.</h2>
+    <p class="lead">Each phase builds on the last — and ends with a concrete deliverable that students submit to the editorial board.</p>
+
+```
+<div class="phase-timeline">
+
+  <!-- Phase 1 -->
+  <div class="phase-item">
+    <div class="phase-badge">I</div>
+    <div class="phase-card">
+      <div class="phase-card-top">
+        <div>
+          <p class="phase-weeks">Weeks 1 – 3</p>
+          <p class="phase-title">Phase 1 → Question &amp; Hypothesis</p>
+        </div>
+        <span class="phase-deliverable-tag">Deliverable Due Week 3</span>
+      </div>
+      <div class="phase-card-body">
+        <p class="phase-desc">Students identify a genuine research question from any discipline, review background knowledge, and formulate a clear, testable hypothesis. The foundation of every great experiment is a great question.</p>
+        <div class="phase-deliverable">
+          <span class="deliverable-label">Deliverable</span>
+          <span class="deliverable-value">Written Research Question + Hypothesis Statement</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phase 2 -->
+  <div class="phase-item">
+    <div class="phase-badge">II</div>
+    <div class="phase-card">
+      <div class="phase-card-top">
+        <div>
+          <p class="phase-weeks">Weeks 4 – 6</p>
+          <p class="phase-title">Phase 2 → Experiment &amp; Data Collection</p>
+        </div>
+        <span class="phase-deliverable-tag">Deliverable Due Week 6</span>
+      </div>
+      <div class="phase-card-body">
+        <p class="phase-desc">Students design and execute their experiment. Variables are identified, methods are documented precisely, and data is collected systematically under faculty guidance.</p>
+        <div class="phase-deliverable">
+          <span class="deliverable-label">Deliverable</span>
+          <span class="deliverable-value">Experiment Data &amp; Lab Notes</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phase 3 -->
+  <div class="phase-item">
+    <div class="phase-badge">III</div>
+    <div class="phase-card">
+      <div class="phase-card-top">
+        <div>
+          <p class="phase-weeks">Week 7</p>
+          <p class="phase-title">Phase 3 → Analysis</p>
+        </div>
+        <span class="phase-deliverable-tag">Deliverable Due Week 7</span>
+      </div>
+      <div class="phase-card-body">
+        <p class="phase-desc">Raw data is transformed into insight. Students create graphs, identify patterns, interpret results, and draw evidence-based conclusions.</p>
+        <div class="phase-deliverable">
+          <span class="deliverable-label">Deliverable</span>
+          <span class="deliverable-value">Graphs + Written Analysis Document</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phase 4 -->
+  <div class="phase-item">
+    <div class="phase-badge">IV</div>
+    <div class="phase-card">
+      <div class="phase-card-top">
+        <div>
+          <p class="phase-weeks">Weeks 8 – 10</p>
+          <p class="phase-title">Phase 4 → Research Paper</p>
+        </div>
+        <span class="phase-deliverable-tag">Deliverable Due Week 10</span>
+      </div>
+      <div class="phase-card-body">
+        <p class="phase-desc">Students write a formally structured research paper following academic conventions — introduction, methodology, results, discussion, and references. Papers undergo peer review before final submission.</p>
+        <div class="phase-deliverable">
+          <span class="deliverable-label">Deliverable</span>
+          <span class="deliverable-value">Full Research Paper Draft (PDF or DOCX)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phase 5 -->
+  <div class="phase-item">
+    <div class="phase-badge">V</div>
+    <div class="phase-card">
+      <div class="phase-card-top">
+        <div>
+          <p class="phase-weeks">Weeks 11 – 12</p>
+          <p class="phase-title">Phase 5 → Presentation</p>
+        </div>
+        <span class="phase-deliverable-tag">Deliverable Due Week 11</span>
+      </div>
+      <div class="phase-card-body">
+        <p class="phase-desc">Students present their research to an audience of peers, teachers, and parents. Communication, confidence, and clarity are the key outcomes of this final phase.</p>
+        <div class="phase-deliverable">
+          <span class="deliverable-label">Deliverable</span>
+          <span class="deliverable-value">Presentation Slides (PPT or PDF)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+```
+
   </div>
 </div>
 
-<!-- ARCHIVES -->
+<!-- ACHIEVEMENTS -->
 
-<div id="archives" class="section" style="padding-top:0;">
-  <span class="eyebrow">Archives</span>
-  <h2>Past Issues</h2>
-  <div class="issue-card" style="background:var(--cream);">
-    <p style="font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);text-align:center;padding:12px;">
-      Past issues will be archived here. Volume 1 · Issue 1 is the inaugural edition.
-    </p>
-  </div>
-</div>
-
-<!-- PROCESS -->
-
-<div id="process" class="section" style="padding-top:0;">
-  <span class="eyebrow">Our Process</span>
-  <h2>From question to publication</h2>
-  <p class="lead">Every paper follows a rigorous 12-week research journey, modelled on real academic practice.</p>
-  <div class="process-grid">
-    <div class="process-step">
-      <div class="step-num">01</div>
-      <p class="step-title">Question</p>
-      <p class="step-desc">Students identify a genuine research question from any discipline.</p>
-    </div>
-    <div class="process-step">
-      <div class="step-num">02</div>
-      <p class="step-title">Investigation</p>
-      <p class="step-desc">A structured methodology is designed and applied with faculty guidance.</p>
-    </div>
-    <div class="process-step">
-      <div class="step-num">03</div>
-      <p class="step-title">Analysis</p>
-      <p class="step-desc">Data and findings are rigorously analysed and interpreted.</p>
-    </div>
-    <div class="process-step">
-      <div class="step-num">04</div>
-      <p class="step-title">Peer Review</p>
-      <p class="step-desc">Submissions are reviewed by student editors and faculty advisors.</p>
-    </div>
-    <div class="process-step">
-      <div class="step-num">05</div>
-      <p class="step-title">Publication</p>
-      <p class="step-desc">Accepted papers are formally typeset and published in the journal.</p>
+<div id="achievements" class="achieve-band">
+  <div class="achieve-inner">
+    <span class="eyebrow">Outcomes</span>
+    <h2>What Students Will Achieve</h2>
+    <div class="achieve-grid">
+      <div class="achieve-card">
+        <div class="achieve-num">01</div>
+        <span class="achieve-icon">🔬</span>
+        <p class="achieve-title">Real Experiment with Data</p>
+        <p class="achieve-desc">A hands-on experiment designed and conducted entirely by the student, with documented methodology and raw data.</p>
+      </div>
+      <div class="achieve-card">
+        <div class="achieve-num">02</div>
+        <span class="achieve-icon">📊</span>
+        <p class="achieve-title">Graphs &amp; Analysis</p>
+        <p class="achieve-desc">Data visualised through charts, with written interpretation of findings, patterns, and trends.</p>
+      </div>
+      <div class="achieve-card">
+        <div class="achieve-num">03</div>
+        <span class="achieve-icon">📄</span>
+        <p class="achieve-title">Research Paper</p>
+        <p class="achieve-desc">A formally written, peer-reviewed paper following standard academic structure — introduction through references.</p>
+      </div>
+      <div class="achieve-card">
+        <div class="achieve-num">04</div>
+        <span class="achieve-icon">🎤</span>
+        <p class="achieve-title">Final Presentation</p>
+        <p class="achieve-desc">A structured, confident oral presentation to a live audience — building academic communication skills.</p>
+      </div>
+      <div class="achieve-card">
+        <div class="achieve-num">05</div>
+        <span class="achieve-icon">🏅</span>
+        <p class="achieve-title">Published Researcher</p>
+        <p class="achieve-desc">Accepted papers published in the Catalyst journal — a formal academic credential for each student author.</p>
+      </div>
     </div>
   </div>
 </div>
 
 <!-- EDITORIAL BOARD -->
 
-<div id="editorial" class="section" style="padding-top:0;">
+<div id="editorial" class="section">
   <span class="eyebrow">Editorial Board</span>
-  <h2>The team behind the journal</h2>
+  <h2>The team behind the program</h2>
   <div class="board-grid">
     <div class="board-card">
       <p class="board-role">Editor-in-Chief</p>
-      <p class="board-name">To be announced</p>
+      <p class="board-name">To Be Announced</p>
       <p class="board-affil">NPS Koramangala</p>
     </div>
     <div class="board-card">
       <p class="board-role">Faculty Advisor</p>
-      <p class="board-name">To be announced</p>
+      <p class="board-name">To Be Announced</p>
       <p class="board-affil">NPS Koramangala</p>
     </div>
     <div class="board-card">
@@ -587,18 +888,259 @@
   <p style="margin-top:16px;font-size:0.85rem;color:var(--muted);font-style:italic;">Board member details will be listed here upon appointment.</p>
 </div>
 
-<!-- SUBMIT -->
+<!-- SUBMISSION PORTAL -->
 
-<div id="submit" class="submit-band">
-  <div class="submit-inner">
-    <div>
-      <p class="submit-label">Submit Your Research</p>
-      <h2 class="submit-heading">Ready to share your findings?</h2>
-      <p class="submit-text">We welcome original research from NPS Koramangala students across all disciplines. Submissions are reviewed on a rolling basis. All accepted papers undergo peer review before publication.</p>
+<div id="submit" class="portal-band">
+  <div class="portal-inner">
+    <span class="eyebrow">Project Submission Portal</span>
+    <h2>Submit Your Research Project</h2>
+    <p class="lead">Select the phase you are submitting for, complete all fields, and upload your deliverable. Each phase has its own submission.</p>
+
+```
+<form onsubmit="handleSubmit(event)" style="margin-top:32px;">
+
+  <!-- Student Info -->
+  <div class="form-always">
+    <div class="form-block-header">
+      <span class="block-num">01</span>
+      <span class="block-title">Student Information</span>
     </div>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSex60ymZTPUCaJxy5ss9rs6BIQ00iTPkfFPoWu8f2Z9kDzIcw/viewform" target="_blank" rel="noopener" class="btn-primary">
-      Submit Paper →
-    </a>
+    <div class="form-body">
+      <div class="form-row">
+        <div class="field">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" placeholder="Your full name" required>
+        </div>
+        <div class="field">
+          <label for="grade">Grade / Class *</label>
+          <input type="text" id="grade" placeholder="e.g. Grade 9 – A" required>
+        </div>
+      </div>
+      <div class="field full">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" placeholder="your@email.com" required>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phase Tabs -->
+  <div style="margin-top:24px; margin-bottom:0;">
+    <div class="form-block-header" style="background:var(--paper); border:1px solid var(--rule); border-bottom:none;">
+      <span class="block-num">02</span>
+      <span class="block-title">Select Phase to Submit</span>
+    </div>
+    <div class="phase-tabs">
+      <button type="button" class="phase-tab active" onclick="switchPhase(1)">Phase I</button>
+      <button type="button" class="phase-tab" onclick="switchPhase(2)">Phase II</button>
+      <button type="button" class="phase-tab" onclick="switchPhase(3)">Phase III</button>
+      <button type="button" class="phase-tab" onclick="switchPhase(4)">Phase IV</button>
+      <button type="button" class="phase-tab" onclick="switchPhase(5)">Phase V</button>
+    </div>
+  </div>
+
+  <!-- Phase 1 Panel -->
+  <div class="phase-panel panel-1 active" id="panel-1">
+    <div class="phase-panel-header">
+      <div class="panel-badge">I</div>
+      <div class="panel-meta">
+        <p class="panel-phase-name">Question &amp; Hypothesis</p>
+        <p class="panel-weeks">Weeks 1 – 3 · Due End of Week 3</p>
+      </div>
+    </div>
+    <div class="deliverable-notice">
+      <strong>📋 Deliverable for this phase</strong>
+      Written Research Question + Hypothesis Statement
+    </div>
+    <div class="form-body">
+      <div class="field full">
+        <label for="p1-question">Research Question *</label>
+        <textarea id="p1-question" placeholder="State your research question clearly and precisely..."></textarea>
+      </div>
+      <div class="field full">
+        <label for="p1-hypothesis">Hypothesis *</label>
+        <textarea id="p1-hypothesis" placeholder="State your hypothesis — what do you predict will happen, and why?"></textarea>
+      </div>
+      <div class="field full">
+        <label for="p1-subject">Subject / Discipline *</label>
+        <select id="p1-subject">
+          <option value="" disabled selected>Select subject area</option>
+          <option>Biology / Life Sciences</option>
+          <option>Chemistry</option>
+          <option>Physics</option>
+          <option>Environmental Science</option>
+          <option>Mathematics / Statistics</option>
+          <option>Computer Science</option>
+          <option>Social Science / Psychology</option>
+          <option>Interdisciplinary</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="field full">
+        <label>Upload Document (optional)</label>
+        <div class="upload-box">
+          <input type="file" accept=".pdf,.doc,.docx">
+          <div class="upload-icon">📄</div>
+          <p class="upload-label">Upload your written hypothesis document</p>
+          <p class="upload-hint">PDF, DOC, DOCX · Max 10MB</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phase 2 Panel -->
+  <div class="phase-panel panel-2" id="panel-2">
+    <div class="phase-panel-header">
+      <div class="panel-badge">II</div>
+      <div class="panel-meta">
+        <p class="panel-phase-name">Experiment &amp; Data Collection</p>
+        <p class="panel-weeks">Weeks 4 – 6 · Due End of Week 6</p>
+      </div>
+    </div>
+    <div class="deliverable-notice">
+      <strong>📋 Deliverable for this phase</strong>
+      Experiment Data &amp; Lab Notes
+    </div>
+    <div class="form-body">
+      <div class="field full">
+        <label for="p2-method">Experiment Type *</label>
+        <select id="p2-method">
+          <option value="" disabled selected>Select experiment type</option>
+          <option>Controlled Laboratory Experiment</option>
+          <option>Field Experiment / Observation</option>
+          <option>Survey / Questionnaire Based</option>
+          <option>Computational / Simulation</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="field full">
+        <label for="p2-method-desc">Describe Your Methodology *</label>
+        <textarea id="p2-method-desc" placeholder="Briefly describe how you conducted your experiment, what variables you used, and how you collected data..."></textarea>
+      </div>
+      <div class="field full">
+        <label>Upload Data &amp; Lab Notes *</label>
+        <div class="upload-box">
+          <input type="file" accept=".csv,.xlsx,.pdf,.doc,.docx,.jpg,.jpeg,.png" multiple>
+          <div class="upload-icon">📁</div>
+          <p class="upload-label">Upload your data files and lab notes</p>
+          <p class="upload-hint">CSV, Excel, PDF, DOCX, JPG, PNG · Max 20MB</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phase 3 Panel -->
+  <div class="phase-panel panel-3" id="panel-3">
+    <div class="phase-panel-header">
+      <div class="panel-badge">III</div>
+      <div class="panel-meta">
+        <p class="panel-phase-name">Analysis</p>
+        <p class="panel-weeks">Week 7 · Due End of Week 7</p>
+      </div>
+    </div>
+    <div class="deliverable-notice">
+      <strong>📋 Deliverable for this phase</strong>
+      Graphs + Written Analysis Document
+    </div>
+    <div class="form-body">
+      <div class="field full">
+        <label for="p3-findings">Key Findings *</label>
+        <textarea id="p3-findings" placeholder="Summarise the key patterns and findings from your data analysis..."></textarea>
+      </div>
+      <div class="field full">
+        <label for="p3-conclusion">Conclusion *</label>
+        <textarea id="p3-conclusion" placeholder="Does your data support your hypothesis? What conclusions can you draw?"></textarea>
+      </div>
+      <div class="field full">
+        <label>Upload Graphs &amp; Analysis Document *</label>
+        <div class="upload-box">
+          <input type="file" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.ppt,.pptx" multiple>
+          <div class="upload-icon">📊</div>
+          <p class="upload-label">Upload your graphs and analysis</p>
+          <p class="upload-hint">PDF, DOCX, JPG, PNG, PPT · Max 20MB</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phase 4 Panel -->
+  <div class="phase-panel panel-4" id="panel-4">
+    <div class="phase-panel-header">
+      <div class="panel-badge">IV</div>
+      <div class="panel-meta">
+        <p class="panel-phase-name">Research Paper</p>
+        <p class="panel-weeks">Weeks 8 – 10 · Due End of Week 10</p>
+      </div>
+    </div>
+    <div class="deliverable-notice">
+      <strong>📋 Deliverable for this phase</strong>
+      Full Research Paper Draft (PDF or DOCX)
+    </div>
+    <div class="form-body">
+      <div class="field full">
+        <label for="p4-title">Paper Title *</label>
+        <input type="text" id="p4-title" placeholder="Title of your research paper">
+      </div>
+      <div class="field full">
+        <label for="p4-abstract">Abstract *</label>
+        <textarea id="p4-abstract" placeholder="Provide a brief abstract (150–250 words) summarising your research..."></textarea>
+      </div>
+      <div class="field full">
+        <label>Upload Research Paper *</label>
+        <div class="upload-box">
+          <input type="file" accept=".pdf,.doc,.docx">
+          <div class="upload-icon">📄</div>
+          <p class="upload-label">Upload your full research paper</p>
+          <p class="upload-hint">PDF, DOC, DOCX · Max 20MB</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phase 5 Panel -->
+  <div class="phase-panel panel-5" id="panel-5">
+    <div class="phase-panel-header">
+      <div class="panel-badge">V</div>
+      <div class="panel-meta">
+        <p class="panel-phase-name">Presentation</p>
+        <p class="panel-weeks">Weeks 11 – 12 · Slides Due End of Week 11</p>
+      </div>
+    </div>
+    <div class="deliverable-notice">
+      <strong>📋 Deliverable for this phase</strong>
+      Presentation Slides (PPT or PDF)
+    </div>
+    <div class="form-body">
+      <div class="field full">
+        <label for="p5-summary">One-Line Summary of Your Research *</label>
+        <input type="text" id="p5-summary" placeholder="Summarise your research in one sentence...">
+      </div>
+      <div class="field full">
+        <label for="p5-notes">Presentation Notes (optional)</label>
+        <textarea id="p5-notes" placeholder="Any notes about your presentation for the editorial board..."></textarea>
+      </div>
+      <div class="field full">
+        <label>Upload Presentation Slides *</label>
+        <div class="upload-box">
+          <input type="file" accept=".ppt,.pptx,.pdf">
+          <div class="upload-icon">🎤</div>
+          <p class="upload-label">Upload your presentation slides</p>
+          <p class="upload-hint">PPT, PPTX, PDF · Max 30MB</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notes + Submit -->
+  <div class="submit-row">
+    <div>
+      <button type="submit" class="btn-submit">Submit Phase →</button>
+      <p class="submit-note" style="margin-top:10px;">Confirmation within 48 hours. All submissions are confidential.</p>
+    </div>
+  </div>
+
+</form>
+```
+
   </div>
 </div>
 
@@ -612,7 +1154,7 @@
       <div class="rec-icon">★</div>
       <div class="rec-text">
         <strong>Best Paper Award</strong>
-        Awarded each issue to the most outstanding student research submission.
+        Awarded each cycle to the most outstanding student research submission.
       </div>
     </div>
     <div class="recognition-item">
@@ -644,11 +1186,11 @@
     </div>
     <div class="contact-item">
       <p class="contact-label">Submissions</p>
-      <p class="contact-value">Via the Google Form submission portal linked above.</p>
+      <p class="contact-value">Via the Project Submission Portal above.</p>
     </div>
     <div class="contact-item">
       <p class="contact-label">General Enquiries</p>
-      <p class="contact-value">Reach out through the school's official channels or the editorial board.</p>
+      <p class="contact-value">Through the school's official channels or the editorial board.</p>
     </div>
   </div>
 </div>
@@ -656,10 +1198,37 @@
 <!-- FOOTER -->
 
 <footer>
-  <p class="footer-top">Young Investigators Journal — NPS Koramangala</p>
-  <p>A student-led, peer-reviewed open-access journal.</p>
-  <p class="footer-meta">© 2026 Young Investigators Journal, NPS Koramangala · Volume 1, Issue 1 · All rights reserved</p>
+  <p class="footer-top">Catalyst: Student Research Program — NPS Koramangala</p>
+  <p>A 12-week structured research program for young investigators.</p>
+  <p class="footer-meta">© 2026 Catalyst · NPS Koramangala · All rights reserved</p>
 </footer>
+
+<script>
+  function switchPhase(num) {
+    // update tabs
+    document.querySelectorAll('.phase-tab').forEach((tab, i) => {
+      tab.classList.toggle('active', i + 1 === num);
+    });
+    // update panels
+    document.querySelectorAll('.phase-panel').forEach((panel, i) => {
+      panel.classList.toggle('active', i + 1 === num);
+    });
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.btn-submit');
+    const orig = btn.textContent;
+    btn.textContent = '✓ Submitted Successfully';
+    btn.style.background = '#2d6a4f';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.textContent = orig;
+      btn.style.background = '';
+      btn.disabled = false;
+    }, 5000);
+  }
+</script>
 
 </body>
 </html>
